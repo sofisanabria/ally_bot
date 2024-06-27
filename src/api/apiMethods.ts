@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, RawAxiosRequestHeaders } from "axios";
-import { LocationDataResponse } from "./locationDataResponse";
-import { WeatherDataResponse } from "./weatherDataResponse";
+import { LocationDataResponse } from "../types/locationDataResponse";
+import { WeatherDataResponse } from "../types/weatherDataResponse";
 
 const client = axios.create({
   baseURL: "https://api.openweathermap.org",
@@ -14,7 +14,7 @@ async function getJsonData<T>(
     headers: {
       Accept: "application/json",
     } as RawAxiosRequestHeaders,
-    params: { ...params, appid: process.env.API_KEY || "" },
+    params: { ...params, appid: process.env.WEATHER_KEY || "" },
   };
 
   try {
