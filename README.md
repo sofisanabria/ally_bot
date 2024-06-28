@@ -16,7 +16,12 @@ Lleva un conteo de la cantidad de interacciones que se ha tenido con el bot.
 
 -   Clonar el repositorio
 
--   Crear un archivo .env con la API KEY: https://openweathermap.org/
+-   Crear un archivo .env con el siguiente contenido:
+
+```
+TELEGRAM_TOKEN=<TOKEN_DE_TELEGRAM>
+WEATHER_KEY=<OPENWEATHER_APIKEY>
+```
 
 -   npm install
 
