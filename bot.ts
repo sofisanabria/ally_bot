@@ -1,14 +1,8 @@
-import {
-    Bot,
-    CommandContext,
-    Context,
-    Keyboard,
-    session,
-    SessionFlavor,
-} from 'grammy'
+import { Bot, Context, Keyboard, session, SessionFlavor } from 'grammy'
 import * as dotenv from 'dotenv'
 import { getWeather } from './src/api/apiMethods'
 import { State, SessionData } from './src/types/botState'
+import { generateWeatherPhrase } from './src/utils/weatherParser'
 dotenv.config()
 
 type BotContext = Context & SessionFlavor<SessionData>
@@ -58,8 +52,8 @@ const replyWithIntro = async (ctx) => {
                 })
                 return
             }
-            const response = `El clima en ${city} es ${weather?.weather[0].description}`
-            ctx.reply(response, {
+
+            ctx.reply(generateWeatherPhrase(weather), {
                 reply_markup: keyboard,
                 parse_mode: 'HTML',
             })
