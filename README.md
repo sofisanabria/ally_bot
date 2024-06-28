@@ -1,2 +1,23 @@
 # ally_bot
- 
+
+Este proyecto es un bot de Telegram capaz de decir el clima para una ciudad en una ubicación específica.
+
+Consta de dos funcionalidades principales:
+
+## /Clima
+
+Es una función donde busca el clima según la ciudad ingresada.
+
+## /Contar
+
+Lleva un conteo de la cantidad de interacciones que se ha tenido con el bot.
+
+## Requisitos
+
+-   Clonar el repositorio
+
+-   Crear un archivo .env con la API KEY: https://openweathermap.org/
+
+-   npm install
+
+-   Para correrlo: npm run server
