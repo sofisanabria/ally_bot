@@ -21,6 +21,8 @@ Lleva un conteo de la cantidad de interacciones que se ha tenido con el bot.
 ```
 TELEGRAM_TOKEN=<TOKEN_DE_TELEGRAM>
 WEATHER_KEY=<OPENWEATHER_APIKEY>
+OPENAI_API_KEY=<OPENAI_APIKEY>
+DEBUG=FALSE
 ```
 
 -   npm install
